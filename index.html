@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRMI: Minirhizotron Dataset</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h4 class="title">Fashion MNIST Classification Using Baseline CNN: A Deep Learning Approach</h4>
+    <p class="authors">
+      <a href="#">Gauri Pawar</a><sup>1</sup>
+      <a href="#">Sujith Julakanti</a><sup>1</sup>
+      <a href="#">Kaiqi Zhao</a><sup>1</sup>
+      <a href="#">Phuc Nguyen</a><sup>1</sup>
+      <a href="#">Ninad Deo</a><sup>1</sup>
+    </p>
+    <p class="affiliations">
+      <sup>1</sup>Texas A&M University&nbsp;&nbsp;&nbsp;
+    </p>
+    <div class="section">
+      <h5>Abstract</h5>
+      <p>
+        The Fashion MNIST dataset is a widely used benchmark for evaluating machine learning and deep learning models in image classification tasks. This project explores the application of a Baseline Convolutional Neural Network (CNN) to classify the 10 classes of grayscale images in the Fashion MNIST dataset, such as T-shirts, dresses, sneakers, and more. The Baseline CNN architecture is designed to provide an effective yet computationally efficient solution for the classification task, serving as a foundation for further enhancements and experimentation. By leveraging the power of convolutional layers for feature extraction and dense layers for decision-making, the model achieves competitive accuracy while maintaining simplicity. This study aims to demonstrate the effectiveness of CNNs on fundamental image classification tasks and provide insights into the performance of baseline architectures for real-world datasets.
+      </p>
+    </div>
+    <div class="section">
+      <h5>Dataset Summary</h5>
+      <img src="Fashion_MNIST_Summary.png" alt="Dataset Summary" class="image">
+    </div>
+    <div class="section">
+      <h5>Dataset</h5>
+      <img src="FMNIST Dataset.png" alt="FMNIST DATASET" class="image">
+      <p>
+        The Fashion MNIST (FMNIST) dataset, introduced by Zalando Research, is a widely used benchmark for image classification tasks. It contains <b>70,000 grayscale images</b> of size <b>28×28 pixels</b>, divided into <b>60,000 training</b> and <b>10,000 testing samples</b>. Each image represents a fashion item categorized into one of <b>10 classes</b>: T-shirt/top, trouser, pullover, dress, coat, sandal, shirt, sneaker, bag, or ankle boot. The dataset serves as a more challenging alternative to the traditional MNIST dataset of handwritten digits due to its increased complexity and variety. Fashion MNIST maintains the same image size and structure as MNIST, enabling seamless replacement in models. It is widely used for benchmarking classification models, testing neural network architectures, and evaluating computer vision techniques.
+      </p>
+    </div>
+    <div class="section">
+      <h5>Model Employed</h5>
+      <img src="BlockDiagram.jpg" alt="Block Diagram" class="image">
+      <p>
+    The proposed CNN model comprises a sequential architecture with a total of five layers: a convolutional layer, a pooling layer, a flattening layer, and two dense layers. The initial convolutional layer uses 32 filters with a 3*3 kernel size, ReLU activation, and He initialization, processing input images of dimensions 28*28*1. It is followed by a 2*2 max pooling layer for down-sampling. The output is flattened and passed to a fully connected dense layer with 100 neurons and ReLU activation. Finally, a softmax output layer with 10 neurons is used for classification into 10 categories. 
+
+    The model is trained using the Stochastic Gradient Descent (SGD) optimizer with a learning rate of 0.01 and a momentum of 0.9.    Categorical cross-entropy is employed as the loss function, and the model’s performance is evaluated using accuracy as a metric.
+      </p>
+    </div>
+    <div class="section">
+      <h5>Evaluation</h5>
+      <p>
+        The performance of the baseline CNN model was evaluated on the Fashion MNIST test dataset, achieving a test accuracy of <b>90.47%</b>. The evaluation metrics, confusion matrix, and training-validation accuracy graph provide a detailed analysis of the model's performance.
+      </p>
+    
+      <h3>Classification Metrics</h3>
+      <p>
+        The classification report highlights the precision, recall, and F1-score for each of the 10 classes. The model demonstrates robust performance, with macro-averaged precision, recall, and F1-score of approximately <b>91%</b> each. High accuracy is observed for most classes, though minor misclassifications occur for specific overlapping categories, such as Class 6 (shirt) and Class 4 (coat).
+      </p>
+      <img src="Classification_Report.png" alt="Classification Report" class="image">
+    
+      <h3>Confusion Matrix</h3>
+      <p>
+        The confusion matrix provides insight into class-wise predictions. It shows that while the majority of predictions are correct, some confusion exists between visually similar fashion items. For example, shirts (Class 6) are occasionally misclassified as coats (Class 4), which is consistent with their visual resemblance.
+      </p>
+      <img src="Confusion_Matrix.png" alt="Confusion Matrix" class="image">
+    
+      <h3>Training and Validation Accuracy</h3>
+      <p>
+        The training-validation accuracy plot demonstrates steady improvement during training, with the model converging after around <b>10 epochs</b>. The slight divergence between training and validation accuracy indicates minimal overfitting, showcasing the model’s generalization capability.
+      </p>
+      <img src="Graph.png" alt="Training and Validation Accuracy" class="image">
+    
+      <p>
+        This evaluation confirms the model's efficacy in handling the complexity of the Fashion MNIST dataset while identifying areas for further optimization, such as addressing class confusion.
+      </p>
+    </div>    
+    <div class="section">  
+      <h5>References and materials</h5>
+      <div class="materials">
+        <a href="https://www.tensorflow.org/datasets/catalog/fashion_mnist">
+          <img src="Tensorflow.jfif" alt="TensorFlow Image">
+        </a>
+        <a href="https://dl.acm.org/doi/10.1145/3065386">
+          <img src="Reference 1.png" alt="Reference 1">
+        </a>
+        <a href="https://ieeexplore.ieee.org/document/726791">
+          <img src="IEEE.jfif" alt="IEEE">
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
